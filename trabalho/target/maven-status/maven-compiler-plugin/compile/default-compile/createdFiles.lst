@@ -1,0 +1,14 @@
+com\senai\trabalho\service\VeiculoService.class
+com\senai\trabalho\controller\VeiculoController.class
+com\senai\trabalho\DTO\AluguelDTO.class
+com\senai\trabalho\TrabalhoApplication.class
+com\senai\trabalho\controller\AluguelController.class
+com\senai\trabalho\exception\GlobalExceptionHandler.class
+com\senai\trabalho\model\Veiculo.class
+com\senai\trabalho\service\AluguelService.class
+com\senai\trabalho\DTO\ClienteDTO.class
+com\senai\trabalho\service\ClienteService.class
+com\senai\trabalho\DTO\VeiculoDTO.class
+com\senai\trabalho\model\Cliente.class
+com\senai\trabalho\controller\ClienteController.class
+com\senai\trabalho\model\Aluguel.class
