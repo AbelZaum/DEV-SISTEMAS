@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Quiz Interativo</title>
+    
+</head>
+
+<body>
+    <div class="quiz-container">
+        <header>
+            <h1>Quiz Interativo</h1>
+            <div class="timer">Tempo: <span id="time">15</span>s</div>
+        </header>
+        <section id="question-section">
+            <div id="question"></div>
+            <div id="options"></div>
+        </section>
+        <footer>
+            <button id="next-button" class="hidden">Próxima Pergunta</button>
+        </footer>
+        <div id="result" class="hidden">
+            <h2>Resultado</h2>
+            <p>Você acertou <span id="correct-answers"></span> de <span id="total-questions"></span> perguntas.</p>
+            <p>Você errou <span id="wrong-answers"></span> perguntas.</p>
+            <p>Feito pelo Aluno: Gabriel Abel da Silva :)</p>
+            <button id="restart-button">Reiniciar Quiz</button>
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>

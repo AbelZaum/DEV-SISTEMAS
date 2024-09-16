@@ -1,0 +1,96 @@
+/* Estilo geral do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do container do quiz */
+.quiz-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.timer {
+    font-weight: bold;
+}
+
+/* Estilo das perguntas */
+#question {
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+/* Estilo das opções de resposta */
+#options button {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #007BFF; /* Azul padrão */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+}
+
+#options button:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Estilos de feedback visual */
+.correct {
+    background-color: #28a745 !important; /* Verde para respostas corretas */
+}
+
+.incorrect {
+    background-color: #dc3545 !important; /* Vermelho para respostas incorretas */
+}
+
+/* Estilo do botão "Próxima Pergunta" e "Reiniciar" */
+button#next-button,
+button#restart-button {
+    background-color: #35f80d; /* Azul padrão */
+}
+
+button#next-button:hover,
+button#restart-button:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Estilo do resultado final */
+#result {
+    padding: 20px;
+    text-align: center;
+}
+
+#result h2 {
+    color: #007BFF; /* Azul para o título */
+}
+
+.hidden {
+    display: none; /* Oculta elementos que não devem ser exibidos */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+   .quiz-container {
+       width: 95%;
+   }
+}
