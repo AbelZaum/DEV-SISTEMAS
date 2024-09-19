@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+.game-container {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  #restart {
+    margin-top: 20px; /* Espaço entre o botão e o contador de jogadas */
+    display: inline-block; /* Garantir que ele seja tratado como um elemento em linha */
+  }
+  
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    /* 4 colunas no desktop */
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transform: rotateY(0);
+    transition: transform 0.3s;
+}
+
+.card.flip .card-front {
+    display: block;
+}
+
+.card.flip .card-back {
+    display: none;
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.card-back {
+    background-color: #333;
+}
+
+.card-front {
+    display: none;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        /* 3 colunas em telas menores */
+        gap: 8px;
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card-front,
+    .card-back {
+        font-size: 1.5rem;
+        /* Tamanho menor para os emojis em telas pequenas */
+    }
+}
+
+@media (max-width: 400px) {
+    .board {
+        grid-template-columns: repeat(2, 70px);
+        /* 2 colunas em telas muito pequenas */
+        gap: 5px;
+    }
+
+    .card {
+        width: 70px;
+        height: 70px;
+    }
+
+    .card-front,
+    .card-back {
+        font-size: 1.2rem;
+        /* Diminuir ainda mais o tamanho dos emojis */
+    }
+}
+
+.button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.6em 2em;
+    border: rgb(13, 14, 13) solid 0.15em;
+    border-radius: 0.25em;
+    color: rgb(18, 19, 18);
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 300ms, color 300ms;
+    user-select: none;
+  }
+  
+  .button p {
+    z-index: 1;
+  }
+  
+  .button:hover {
+    color: #212121;
+  }
+  
+  .button:active {
+    border-color: teal;
+  }
+  
+  .button::after, .button::before {
+    content: "";
+    position: absolute;
+    width: 9em;
+    aspect-ratio: 1;
+    background: mediumspringgreen;
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+  }
+  
+  .button::before {
+    left: 0;
+    transform: translateX(-8em);
+  }
+  
+  .button::after {
+    right: 0;
+    transform: translateX(8em);
+  }
+  
+  .button:hover:before {
+    transform: translateX(-1em);
+  }
+  
+  .button:hover:after {
+    transform: translateX(1em);
+  }
+  
+  .button:active:before,
+  .button:active:after {
+    background: teal;
+  }
+  
+  
