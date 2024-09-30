@@ -1,0 +1,4 @@
+com\senai\login\service\AuthService.class
+com\senai\login\LoginApplication.class
+com\senai\login\controller\AuthController.class
+com\senai\login\model\UsuarioModel.class
