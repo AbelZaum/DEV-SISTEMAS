@@ -1,6 +1,0 @@
-com\senai\clientes\controllers\ClienteController.class
-com\senai\clientes\models\ClienteModel.class
-com\senai\clientes\Dtos\ClienteDTO.class
-com\senai\clientes\repositories\ClienteRepository.class
-com\senai\clientes\services\ClienteService.class
-com\senai\clientes\ClientesApplication.class
