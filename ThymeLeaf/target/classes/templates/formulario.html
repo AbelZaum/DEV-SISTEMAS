@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulário de Contato</title>
+</head>
+<body>
+    <h1 th:text="${contato.id != null ? 'Editar Contato' : 'Novo Contato'}"></h1>
+    <form th:action="@{${contato.id != null ? '/contatos/atualizar/' + ${contato.id} : '/contatos'}}" method="post">
+        <label>Nome:</label>
+        <input type="text" th:field="*{nome}" required><br>
+        <label>Telefone:</label>
+        <input type="text" th:field="*{telefone}" required><br>
+        <label>Email:</label>
+        <input type="email" th:field="*{email}" required><br>
+        <label>Endereço:</label>
+        <input type="text" th:field="*{endereco}" required><br>
+        <label>CPF/CNPJ:</label>
+        <input type="text" th:field="*{cpfCnpj}" required><br>
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="/contatos">Voltar</a>
+</body>
+</html>
